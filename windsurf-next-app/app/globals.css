@@ -19,3 +19,41 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer components {
+  .nav-link {
+    @apply px-4 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200;
+  }
+  
+  .nav-link-active {
+    @apply text-blue-600;
+  }
+  
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 py-8;
+  }
+  
+  .heading {
+    @apply text-4xl font-bold mb-6 text-gray-800;
+  }
+  
+  .subheading {
+    @apply text-xl text-gray-600 mb-8;
+  }
+}
+
+/* Page Transition Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-transition {
+  animation: fadeIn 0.5s ease-out;
+}
